@@ -34,7 +34,7 @@ myApp.config(function($routeProvider){
 
 });
 
-/*
+
 myApp.controller("homeCtrl", function($scope) {
 
     $scope.title = "Home";
@@ -47,5 +47,13 @@ includefiles.controller('IncludeCtrl', ['$rootScope','$route', '$location','$con
         name : 'Root scope',
         templates : { main: 'index.html', header: 'header.html', footer: 'footer.html' }
     });
+}]); 
+//https://docs.angularjs.org/api/ng/directive/ngSubmit
 
-*/
+var loginformsubmit = angular.module('loginformsubmit', []);
+
+loginformsubmit.controller('loginCtrl',['$scope','$route', '$location','$controller',function ($scope,$route,$location,$controller)  {
+	
+	
+}
+]);
