@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html >
+	<title>Angular Sample App</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Sample Angular App">
+		<meta name="keywords" content="HTML,CSS,Angular,JavaScript">
+		<meta name="author" content="Sample page">
+		
+		<link rel="stylesheet" type="text/css" src="css/style.css" />
+		
+	
+		 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		
+		<!-- Bootstrap frameworks-->
+		<!--  <script src="bootstrap/js/bootstrap.js"></script>
+		  <script src="bootstrap/js/bootstrap.min.js"></script>-->
+		<!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+-->
+<script src="js/angular.min.js"></script>
+		  <script src="js/angular-route.min.js"></script>
+		  <script src="js/ngProgress.min.js"></script>
+		  
+		<!-- Angular Controllers-->
+		<script type="text/javascript" src="controller/app.js"></script>
+		  <style>
+		  .formsignin,formsample{
+				max-width: 250px;
+				padding: 15px;
+				margin: 0 auto;
+				background-color: #fff;
+			}
+		  body {
+				padding-top: 40px;
+				padding-bottom: 40px;
+				background-color: #eee;
+				}
+				 
+		  </style>
+	  <!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+	</head> 
+
+<body ng-app="app">
+<div ng-app="app">
+    <div class="container">
+	<div class="formsample">
+		  <form class="formsignin">
+			<h2 >Please sign in</h2>
+		<div class="form-group">    
+			<label for="" class="control-label">Email address</label>
+			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		   </div> 
+		  <div class="form-group"> 
+			<label for="inputPassword" class="">Password</label>
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		   
+			</div>	
+			<div class="form-group">
+			  <label>
+				<input type="checkbox" value="remember-me"> Remember me
+			  </label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		  </form>
+
+    </div> <!-- /container -->
+
+</div>
+<div ng-controller="homeCtrl">{{title}}</div>
+<div ng-view></div>
+</div>
+<script type="text/ng-template" id="footer.html">
+            <p>This is the 1st nested template</p>
+        </script>
+<div ng-app="includefiles">
+ 
+
+	<div ng-controller="IncludeCtrl" >
+		<div ng-include src="templates.footer" ></div>
+	</div>
+<div ng-include src="footer.html"></div>asdas
+<div ng-include="'index.html'"></div>
+</div>
+</body>	
+
+
+
+</body>
+</html>
+
