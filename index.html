@@ -43,19 +43,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 	</head> 
 
-<body ng-app="app">
+<body >
 <div ng-app="app">
     <div class="container">
 	<div class="formsample">
-		  <form class="formsignin">
+		  <form class="formsignin" ng-submit="loginSubmit()" ng-controller="loginCtrl">
 			<h2 >Please sign in</h2>
 		<div class="form-group">    
 			<label for="" class="control-label">Email address</label>
-			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+			<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 		   </div> 
 		  <div class="form-group"> 
 			<label for="inputPassword" class="">Password</label>
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 		   
 			</div>	
 			<div class="form-group">
@@ -63,7 +63,7 @@
 				<input type="checkbox" value="remember-me"> Remember me
 			  </label>
 			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" value="submit">Sign in</button>
 		  </form>
 
     </div> <!-- /container -->
@@ -76,13 +76,13 @@
             <p>This is the 1st nested template</p>
         </script>
 <div ng-app="includefiles">
- 
+ {{templates.footer}}
 
-	<div ng-controller="IncludeCtrl" >
+	<div ng-controller="IncludeCtrl" >{{templates.footer}}
 		<div ng-include src="templates.footer" ></div>
 	</div>
 <div ng-include src="footer.html"></div>asdas
-<div ng-include="'index.html'"></div>
+<div ng-include="'footer.html'"></div>
 </div>
 </body>	
 
